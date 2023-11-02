@@ -1,0 +1,129 @@
+body{
+    margin: 0%;
+    background-color: black;
+}
+
+/* For imabackgorund image */
+#image{
+    background-image: url('../images/background.jpeg');
+    background-color: black;
+    background-size: cover;   
+    background-position: center; 
+    background-repeat: no-repeat;
+    filter: brightness(40%);
+    height: 100vh;
+}
+
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.716);
+    opacity: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    border-radius: 10px ;
+    text-align: center;
+}
+
+/* When someone hovers on form */
+form:hover{
+    box-shadow: 0px 2px 0.5px rgba(249, 249, 249, 0.321);
+    background-color: rgba(0, 0, 0, 0.503);
+}
+
+/* For title of application */
+#title
+{
+    color: white;
+    font-family: 'Brush Script MT', cursive;
+}
+
+/* For subheading below title */
+#sub-heading{
+    margin-top: 0%;
+    color: white;
+    font-family: Calibri light;
+    text-align: center;
+}
+
+/* For Prediction data and necessary details */
+#prediction{
+    color: white;
+    font-family: Calibri light;
+    margin-top: 0%;
+}
+
+/* For flash messages */
+#flash{
+    color:lightblue;
+    font-family: Calibri light;
+    margin-top: 0%;
+}
+
+/* For button div */
+#btndiv{
+    display: flex ;
+    color: white;
+    filter: opacity(90%);
+    width: 70vw;
+    justify-content: space-between;
+    padding: 3% 2%;
+    border: 0.1px solid lightgray;
+}
+
+/* When someone hovers over button div */
+#btndiv:hover{
+    filter: opacity(100%);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+/* For input tags*/
+input{
+    font-size: 1em;
+}
+
+/* For adding Responsivness */
+@media only screen and (max-width: 800px) {
+    #btndiv{
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #btndiv{
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    body { 
+       font-size: 0.85em; 
+    }
+    #btndiv{
+        flex-direction: column;
+        padding: 5% 0%;
+    }
+    #upload{
+        align-self: center;
+        width: 80vw;
+    }
+    #submit{
+        margin-top: 4%;
+        width: 80vw;
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 240px){
+
+    body{
+        font-size: 0.8em;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linking the stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/stylesheet/style.css') }}">
+    <!-- Adding favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='/images/favicon.ico') }}">
+    <title>Image_Classifier</title>
+</head>
+<body>
+
+<!--Creating an image div for storing the background image-->
+<div id = "image"></div>
+
+    <!-- Creating a form for sending the data from Frontend to Backend -->
+    <form action="{{url_for('predict')}}" method="post" enctype="multipart/form-data">
+
+        <!-- Displaying Title or name for the project -->
+        <h1 id = "title">Image Classifier</h1>
+
+        <!-- Creating the sub heading -->
+        <h3 id="sub-heading">Upload ⬆️ an image to check whether our model perdict it correct or not</h3>
+
+        <!-- Creating a div to store the buttons -->
+        <div id ="btndiv">
+
+            <input id="upload" type="file" name="Image" value="Upload file" accept="image/*">       <!-- Upload button --> 
+            <input id="submit" type="submit" name="submit" value="Submit">                          <!-- Submit button -->
+
+        </div>   
+
+        <br>                                                                                        <!-- Adding line break -->
+
+        {% for msg in get_flashed_messages() %}
+            
+            <h3 id="flash">{{ msg }}</h3>                                                           <!-- Creating a tag for displaying flash messages -->
+
+        {% endfor %}
+           
+        <!-- Creating a tag for Displaying Prediction and necessary details -->
+        <h3 id="prediction">{{prediction_text}}</h3>                        
+
+    </form>
+</body>
+</html>
