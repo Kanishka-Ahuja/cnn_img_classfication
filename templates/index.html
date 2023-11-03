@@ -36,12 +36,12 @@
 
         {% for msg in get_flashed_messages() %}
             
-            <h3 id="flash">{{ msg }}</h3>                                                           <!-- Creating a tag for displaying flash messages -->
+            <h4 id="flash">{{ msg }}</h4>                                                           <!-- Creating a tag for displaying flash messages -->
 
         {% endfor %}
            
         <!-- Creating a tag for Displaying Prediction and necessary details -->
-        <h3 id="prediction">{{prediction_text}}</h3>                        
+        <h2 id="prediction">{{prediction_text}}</h2>                        
 
     </form>
 </body>
